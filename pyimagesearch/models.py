@@ -13,6 +13,8 @@ def create_mlp(dim, regress=False):
 
     return model
 
+# does the same thing as create_sequential_cnn, just different notations style
+# However, this notation is required for creating CNNs that have combined inputs
 def create_functional_cnn(width, height, depth, filters=(16, 32, 64), regress=False):
     input_shape = (height, width, depth)
     channel_dimension = -1
