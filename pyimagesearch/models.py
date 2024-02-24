@@ -23,7 +23,7 @@ def create_cnn(width, height, depth, filters=(16, 32, 64), regress=False):
     for (i, f) in enumerate(filters):
         # if this is the first CONV layer then set the input
         if i == 0:
-            model.add(Conv2D(f, (3, 3), padding="same", input_dim=input_shape))
+            model.add(Conv2D(f, (3, 3), padding="same", input_shape=input_shape))
         else:
             model.add(Conv2D(f, (3, 3), padding="same"))
 
