@@ -17,7 +17,7 @@ df = load_house_attributes(input_path)
 (train, test) = train_test_split(df, test_size=0.25, random_state=42)
 
 # scale prices column
-max_price = df["price"].max()
+max_price = train["price"].max()
 train["price"] = train["price"] / max_price
 test["price"] = test["price"] / max_price
 
