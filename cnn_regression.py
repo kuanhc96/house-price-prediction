@@ -25,7 +25,7 @@ max_price = Xtrain_attr["price"].max()
 Ytrain = Xtrain_attr["price"]/max_price
 Ytest = Xtest_attr["price"]/max_price
 
-model = models.create_cnn(64, 64, 3, regress=True)
+model = models.create_functional_cnn(64, 64, 3, regress=True)
 adam = Adam(learning_rate=1e-3, weight_decay=1e-3/200)
 model.compile(loss="mean_absolute_percentage_error", optimizer=adam)
 
